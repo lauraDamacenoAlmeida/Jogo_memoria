@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.button {
+    float: left;
+    padding: 30px;
+}
+.button2 {
+    background-color: #0489B1; /* AquaBlue */
+    border: 2px solid FFFFFF; /* Black */
+    border-radius: 12px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    position: fixed;
+    top: 40%;
+    left: 5%;
+    padding-top: 55px;
+    padding-left: 10px;
+
+}
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:hover {background-color: #ddd;}
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0489B1;
+    color: white;
+}
+
+#nav{
+    color: white;
+    position: fixed;
+}
+#img{
+    position: absolute;
+    width: 270px;
+    top: 20%;
+    left: 40%;
+}
+#forms{
+    top:100%;
+    padding-top: 50px;
+    padding-left: 40%;
+}
+#fundo{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.btn :hover{
+    color: yellow;
+}
+#tabCrud{
+    position: absolute;
+    top: 64%;
+}
+#buttons{
+    position: fixed;
+    padding-top: 65px;
+    padding-left: 105px;
+    top: 35%;
+    left: 40%; 
+}
+#buttons button{
+top:50%;
+left: 50%;
+}

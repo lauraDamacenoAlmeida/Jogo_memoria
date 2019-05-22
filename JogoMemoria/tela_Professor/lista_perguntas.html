@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Cadastrar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css"  href="professor.css">
+    </head>
+    <body>
+
+
+
+
+        <!-- NAVBAR -->
+        <div>
+                <header class="Header-old header-logged-out js-details-container Details position-relative f4 py-2">
+                        <nav class="navbar  fixed-top navbar-dark bg-dark" id="nav">
+                            <a class="navbar-brand">Cadastrar perguntas</a>
+                            <button type="button" class="btn btn-outline-info"  onclick="location.href = 'Menu_Professor.html'">
+                                    Início
+                                </button>
+                        </nav>
+                    </header>
+        </div>
+        <!-- FIM NAVBAR -->   
+
+     <!-- Criação de Listas de Perguntas -->
+
+     <div class="forms" id="forms">
+     <form name="form1" method="post">
+            <div class="form-inline">
+                    <div id ="inputs"class="col-auto-20 my-1">
+                        <input id="nome" type="text" name = "nome" class="form-control" placeholder="Digite o nome da Lista" required>
+
+                    </div>
+                    <br>
+                    <div>
+                        <button class="btn btn-success" type="button" name="registrar" id="registrar">Adicionar</button>
+            
+                    </div>
+                </div>
+            <br>            
+                    
+                
+            </form>
+     </div>
+     <img src="../imagens/teste.png" id="img">
+            
+            <div >
+                <table id="tabCrud" class= "table table-dark" >
+                    <tr>
+                        <td>Nome</td>
+                    </tr>
+                </table>
+            </div>
+
+
+        <!-- botao de adicionar pergunta <button type="button" class="btn-primary" data-toggle="modal" data-target="#CriarLista">
+            +Add Pergunta
+        </button>-->
+
+        <!-- Inicio do Modal -->
+        <div class="modal fade" id="CriarLista" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="TituloModalCentralizado">Adicione uma Pergunta a sua Lista.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="col-sm-10 my-1">
+                                <label for="InputPergunta">Nova Pergunta</label>
+                                <input type="text" class="form-control" id="InputPergunta" placeholder="Nova Pergunta">
+                                <br>
+                                <br>
+                            </div>
+                            <div class="col-sm-7 my-1">
+                                <input type="radio" class="RespRadioInput" id="radio1" name="option">
+                                <label for="InputResposta">Resposta a.</label>
+                                <input type="text" class="form-control" id="InputResposta" placeholder="Resposta">
+                                <br>
+                                <br>
+
+                            </div>
+
+                            <div class="col-sm-7 my-1">
+
+                                <input type="radio" class="RespRadioInput" id="radio1" name="option">
+                                <label for="InputResposta">Resposta b.</label>
+                                <input type="text" class="form-control" id="InputResposta" placeholder="Resposta">
+                                <br>
+                                <br>
+
+
+                            </div>
+
+                            <div class="col-sm-7 my-1">
+                                <input type="radio" class="RespRadioInput" id="radio1" name="option">
+                                <label for="InputResposta">Resposta c.</label>
+                                <input type="text" class="form-control" id="InputResposta" placeholder="Resposta">
+                                <br>
+                                <br>
+
+
+                            </div>
+
+                            <div class="col-sm-7 my-1">
+                                <input type="radio" class="RespRadioInput" id="radio1" name="option">
+                                <label for="InputResposta">Resposta d.</label>
+                                <input type="text" class="form-control" id="InputResposta" placeholder="Resposta">
+                                <br>
+                                <br>
+
+
+                            </div>
+
+                            <button type="button" class="btn btn-primary">Add Pergunta</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Fim do Modal -->
+
+
+
+
+
+
+   
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://files.rafaelwendel.com/jquery.js"></script>
+<script type="text/javascript" src="http://files.rafaelwendel.com/jquery.maskedinput.js"></script>
+
+<!-- Fim da criação de Listas de Perguntas -->
+
+
+
+
+<!-- SCRIPT da criação de listas -->
+
+<script>
+                                $(document).ready(function () {
+                                    $("input.CEP").mask("99.999-999");
+                                    $("input.DN").mask("99/99/9999");
+                                    $('#cancelar').on('click', function () {
+                                        $('#nome').val('');
+                                    });
+                                    $('#registrar').on('click', function () {
+
+                                        var nomeVal = form1.nome.value;
+                                        var testCad = 0;
+                                        if(nomeVal==""){
+                                            alert("Favor digitar o nome da lista");
+                                        }
+                                        else{
+                                        console.log(nomeVal);
+                                        $('#tabCrud').append('<tr"><td>' + nomeVal + '</td> <td><input type="button" class="AltBut" value="Alterar"/></td> <td><input type="button" class="salBut" value="Salvar"/></td><td><input type="button" class="ExBut" value="Excluir"/></td><td><button type="button" class="btn-primary" data-toggle="modal" data-target="#CriarLista">+Add Pergunta</button></td></tr>');
+                                        $('#nome').val('');
+                                        //$('.salBut').hide();
+                                        $(".AltBut").bind("click", Editar);
+                                        $(".salBut").bind("click", FunSal);
+                                        $(".ExBut").bind("click", Excluir);}
+                                    });
+                                    function Editar() {
+                                        var par = $(this).parent().parent(); //tr
+                                        var tdNome = par.children("td:nth-child(1)");
+                                        tdNome.html("<input type ='text' value='" + tdNome.html() + "'/td>");
+                                        //$('.salBut').show()
+                                    }
+                                    function FunSal() {
+                                        var par = $(this).parent().parent(); //tr
+                                        var tdNome = par.children("td:nth-child(1)");
+                                        tdNome.html(tdNome.children("input[type=text]").val());
+                                        //$('.AltBut').show();
+                                        //$('.salBut').hide();
+                                    }
+                                    ;
+                                    function Excluir() {
+                                        var par = $(this).parent().parent();
+                                        //$('.AltBut').show() //tr
+                                        par.remove();
+                                    }
+                                    ;
+                                });
+</script>
+
+<!-- Fim do SCRIPT  de criação de listas -->
+
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

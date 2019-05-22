@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Arena</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+
+<body>
+    <div>
+        <header class="Header-old header-logged-out js-details-container Details position-relative f4 py-2">
+            <nav class="navbar  fixed-top navbar-dark bg-dark" id="nav">
+                <a class="navbar-brand">Junte-se a nós</a>
+            </nav>
+        </header>
+    </div>
+    <div class="forms" id="forms_aluno" method='POST' action='respcadTime.php'>
+        <h2>Bem vindo duelistas! Antes de começar o jogo precisamos que você cadastre sua equipe.</h2>
+        <br>
+        <form method="POST" action>
+            <div class="form-row">
+                <div class="form-group col-auto">
+                    <label>Nome da equipe</label>
+                    <input type="text" class="form-control" name="nome"id="nome" placeholder="Digite o nome da equipe" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Quantas pessoas tem no seu grupo?</label>
+                    <select class="form-control" id="numero-integrantes"required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group" id="integrantes" >
+                <label>Nome do integrante</label>
+                <div name="integrantes" id="teste">
+                    
+                </div>
+            </div>
+            <br>
+            <button type="button" class="btn btn-success" id="cadastrar"
+                onclick="window.location='instrucoes.html'">Começar</button>
+        </form>
+    </div>
+    <script >
+    botao.onclick = function(){
+    var integrantes = document.getElementsByClassName("integrante").value;
+    var equipe = document.getElementById("nome").value;
+    if(integrantes ==""){
+        alert("favor inserir os nomes");
+    }
+    else if(equipe==""){
+        alert("favor inserir o nome da equipe");
+    }
+}
+    </script>
+    <script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background: whitesmoke;
+}
+
+
+#topo{
+  width: 100%;
+  height: 120px;
+  text-align: left;
+  position: absolute;
+  
+}
+
+#cardboard {
+  width: 640px;
+  height: 640px;
+  margin-top: 20%;
+  left: 40%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.center-menu{
+  margin-left: 50%;
+}
+
+#navbar{
+  color: white;
+  position: relative;
+}
+
+
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: 33%;
+  margin: 5px;
+  transform-style: preserve-3d;
+  transition: 0.3s;
+  position: relative;
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  position: absolute;
+  background: black;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instruções</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+
+<body>
+    <div>
+        <header class="Header-old header-logged-out js-details-container Details position-relative f4 py-2">
+            <nav class="navbar  fixed-top navbar-dark bg-dark" id="nav">
+                <a class="navbar-brand">Bem-vindo duelista</a>
+            </nav>
+        </header>
+    </div>
+    <div>
+        <article id="instrucao">
+            <h4>Antes de iniciarmos...</h4>
+            <p>Sabemos que você está bem ancioso para começar, mas precisamos que você leia atentamenta as intruções
+                antes de começar a brincar.</p>
+            <p> Este é um dos jogos de memórias mais famosos e um dos mais divertidos também. Nele, um certo número
+                de cartas é posicionada de maneira que a parte com o desenho fica voltada para baixo. Em cada turno
+                o jogador deve escolher 1 carta e responder uma pergunta, se acertar poderá desvirá-la e terá o direito
+                de escolher outra carta e vice e versa.
+                Se você conseguir virar 2 cartas e elas formarem um par, elas são removidas do
+                jogo. Senão, elas são viradas novamente. Esse processo deve ser repetido até que todas as cartas
+                sejam removidas.</p>
+            <p>A ideia do jogo é saber responder as perguntas para poder virar as cartas e memorizá-las.
+                Assim, quando virar uma carta, você tem que puxar na memória para lembrar se já viu o par dela no jogo
+                e,
+                assim, tentar achá-lo.</p>
+            <h5>Como jogar?</h5>
+            <ul>
+                <li>Escolha 1 carta clicando nela para responder uma pergunta.</li>
+                <li>Se você acertar ela desvira, se não a vez passa para outro time.</li>
+                <li>Caso você consiga virar 2 cartas e elas forem iguais, elas são eliminadas. Caso contrário, elas são
+                    viradas novamente.</li>
+                <li>Caso todas as cartas do jogo estejam eliminadas, vence o jogo quem tiver a maior pontução.</li>
+            </ul>
+            <h5>Pontuação</h5>
+            <ul>
+                <li>Todos os times começam com 1 ponto.</li>
+                <li>Ao acertar uma questão o time ganhará 1 ponto.</li>
+                <li>Ao virar 2 cartas o time ganhará 2 pontos.</li>
+                <li>Ao virar 2 cartas iguais o time ganhará 3 pontos</li>
+                <li>Se o time não acertar a questão, ele não pontua</li>
+            </ul>
+            <h4>É hora do duelo!</h4>
+            <button type="button" class="btn btn-dark btn-lg" onclick="window.location='../jogo_memoria/jogo_memoria.html'">Começar</button>
+        </article>
+    </div>
+</body>
+
+</html>
