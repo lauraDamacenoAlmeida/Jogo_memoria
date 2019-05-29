@@ -12,7 +12,15 @@ $obj->setEmail($_POST['email']);
 $obj->setSenha($_POST['senha']);
 
 $banco = new ValidarDAO();
-$banco->Validar();
 
+
+if(!$banco->Validar($obj)){
+    echo"<script>alert('Dados incorretos')</script>";
+	echo "<script>window.location='index.html'</script>";
+    
+}
+else{
+    echo "<script>window.location='../tela_Professor/menu_professor.html'</script>";
+}
 ?>
 

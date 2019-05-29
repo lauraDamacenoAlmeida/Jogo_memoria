@@ -6,7 +6,6 @@
  * Laura Damaceno RA:20964736
  */
 require_once 'CadastroDao.php';
-
 $obj = new Cadastro();
 $obj->setNome($_POST['nome']);
 $obj->setSobrenome($_POST['sobrenome']);

@@ -12,7 +12,7 @@ class CadastroTimeDao {
     private $conexao;
 
     public function __construct() {
-        $this->conexao = new DataSource("teste");
+        $this->conexao = new DataSource("professor");
     }
 
     public function inserir($novo) {

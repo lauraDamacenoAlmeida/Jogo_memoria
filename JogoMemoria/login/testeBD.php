@@ -10,7 +10,7 @@
  */
 include "BD.php";
 
-$banco = new DataSource("teste");
+$banco = new DataSource("professor");
 
 if ($banco->getCon()->connect_error) {
     exit("Erro de conexao ao BD");

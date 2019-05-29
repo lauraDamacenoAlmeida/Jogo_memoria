@@ -12,7 +12,7 @@ class CadastronDao {
     private $conexao;
 
     public function __construct() {
-        $this->conexao = new DataSource("teste1");
+        $this->conexao = new DataSource("professor");
     }
 
     public function inserir($novo) {
