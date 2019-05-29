@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#tema{
+    text-align: center;
+}
+.buttom{
+    float: left;
+    padding: 30px;
+}
+#principal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+#principal img{
+    width: 100%;
+    position: absolute;
+}
+#principal div{
+    position: absolute;
+    padding-top: 200px;
+    padding-left: 100px;
+}
+#nav{
+    color: white;
+    position: fixed;
+}
+#forms{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+#termo{
+    padding-top: 55px;
+    padding-left: 10px;
+}
+#termo ol{
+    padding-left: 15px;
+}
+#cpbusca{
+    position: fixed;
+    top: 50%;
+    left: 37%;
+    padding-top: 55px;
+    padding-left: 10px;
+}
+#duelo{
+    position: fixed;
+    width: 100%;
+}
+#texto{
+    padding-top: 20px;
+    padding-left: 10px;
+    position: absolute;
+}
+.lead-mktg{
+    font-size: 20px;
+}
+.col-md-7{
+    left: 43%;
+}
+#card_sala{
+    position: fixed;
+    top: 65%;
+    left: 37%;
+    padding-top: 55px;
+    padding-left: 10px;
+}
+#forms_aluno{
+    padding-top: 45px;
+    padding-left: 10px;
+}
+#instrucao{
+    padding-top: 55px;
+    padding-left: 10px;
+}
+#instrucao ul{
+    padding-left: 15px;
+}
+#instrucao button{
+    padding-left: 20px;
+    margin-left: 50%;
+    text-align: center;
+
+}
+#integrantes{
+    height: 230px;
+}
